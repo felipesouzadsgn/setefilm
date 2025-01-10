@@ -17,29 +17,28 @@
          -> Choose any color 
          -> Copy the color mode (HSL)
   */
+  --header-height: 3.5rem;
   --hue: 194;
   --first-color: hsl(var(--hue), 88%, 45%);
   --first-color-alt: hsl(var(--hue), 76%, 45%);
   --white-color: hsl(0, 0%, 98%);
   --black-color: hsl(0, 0%, 1%);
   --text-color: hsl(var(--hue), 2%, 66%);
-  --body-color: hsl(var(--hue), 100%, 1%);
+  --body-color: hsl(var(--hue), 0%, 100%);
   --container-color: hsl(var(--hue), 2%, 10%);
-  --conic-gradient: conic-gradient(
-    from 150deg at 50% 45%,
-    hsl(var(--hue), 80%, 20%) 0deg,
-    hsl(var(--hue), 80%, 48%) 140deg,
-    hsl(var(--hue), 80%, 20%) 360deg
-  );
+  --conic-gradient: conic-gradient(from 150deg at 50% 45%,
+      hsl(var(--hue), 80%, 20%) 0deg,
+      hsl(var(--hue), 80%, 48%) 140deg,
+      hsl(var(--hue), 80%, 20%) 360deg);
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Montserrat Alternates", sans-serif;
-  --second-font: "Grechen Fuemen", cursive;
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Montserrat", sans-serif;
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: 0.938rem;
+  --normal-font-size: 1rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
   /*========== Font weight ==========*/
@@ -96,7 +95,7 @@ textarea {
 }
 
 h1, h2, h3, h4 {
-  color: var(--white-color);
+  color: var(--black-color);
   font-weight: var(--font-semi-bold);
 }
 
@@ -126,43 +125,159 @@ img {
   gap: 1.5rem;
 }
 
-.section {
-  padding-block: 2rem 3rem;
-}
-
-.section__title {
-  font-size: var(--h2-font-size);
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
 .main {
   overflow: hidden;
 }
 
 /*======= COMPONENTS =======*/
 /*======= HEADER & NAV =======*/
+.header {
+  width: 100%;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo, .nav__toggle {
+  color: var(--white-color);
+  display: inline-flex;
+}
+.nav__logo {
+  align-items: center;
+  column-gap: 0.25rem;
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+}
+.nav__logo i {
+  font-size: 1.25rem;
+}
+.nav__logo:hover {
+  color: var(--first-color);
+}
+.nav__logo-img {
+  width: 100px;
+}
+.nav__toggle {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    background-color: hsl(0, 0%, 2%);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 3rem;
+    padding-top: 9rem;
+  }
+  .nav__link {
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-medium);
+    transition: 0.3s;
+  }
+  .nav__link:hover {
+    color: var(--white-color);
+  }
+  .nav__close {
+    font-size: 2rem;
+    color: var(--white-color);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+}
+/* Show menu */
+.show-menu {
+  right: 0;
+}
+
+/* Change background header */
+.scroll-header {
+  border-radius: 0 0 1rem 1rem;
+  background-color: var(--black-color);
+  box-shadow: 0 2px 4px hsl(0, 0%, 1%);
+}
+
+/* Active link */
+.active-link {
+  color: var(--white-color);
+}
+
 /*======= HOME =======*/
 .home {
   width: 100%;
   height: 100vh;
+}
+
+/*======= HOME =======*/
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-inline: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.home h1 {
-  font-size: 3rem;
+.banner__img {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+}
+.banner__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1;
+}
+.banner__info-title {
+  color: var(--white-color);
+  text-align: center;
+  font-size: var(--h1-font-size);
+}
+.banner__info-description {
+  color: var(--white-color);
+  text-align: center;
+  font-size: var(--smaller-font-size);
+}
+.banner__info-btn {
+  margin-top: 0.75rem;
 }
 
 .button {
-  display: inline-flex;
+  width: fit-content;
+  display: flex;
+  padding: 8px 16px;
   justify-content: center;
-  background-color: var(--first-color);
+  align-items: center;
+  gap: 4px;
+  border-radius: 999px;
+  border: 1px solid #FFF;
+  background: #181818;
   color: var(--white-color);
-  font-weight: var(--font-semi-bold);
-  padding: 1.25rem 2.5rem;
-  border-radius: 4rem;
-  transition: background-color 0.4s;
+  font-size: var(--smaller-font-size);
 }
 .button:hover {
   background-color: var(--first-color-alt);
@@ -268,11 +383,6 @@ img {
 /*======= BREAKPOINTS =======*/
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 320px) {
-  .home h1 {
-    font-size: 1rem;
-  }
-}
 /* For medium devices */
 @media screen and (min-width: 540px) {
   .home h1 {
@@ -280,8 +390,25 @@ img {
   }
 }
 @media screen and (min-width: 768px) {
-  .home h1 {
-    font-size: 1.5rem;
+  .section {
+    padding: 7rem 0 2rem;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__toggle, .nav__close {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+  .nav__link {
+    font-size: var(--normal-font-size);
+    text-transform: initial;
+    font-weight: 500;
+    color: var(--white-color);
   }
 }
 /* For large devices */

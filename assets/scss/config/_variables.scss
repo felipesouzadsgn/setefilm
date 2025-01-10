@@ -17,30 +17,29 @@
          -> Choose any color 
          -> Copy the color mode (HSL)
   */
+  --header-height: 3.5rem;
   --hue: 194;
   --first-color: hsl(var(--hue), 88%, 45%);
   --first-color-alt: hsl(var(--hue), 76%, 45%);
   --white-color: hsl(0, 0%, 98%);
   --black-color: hsl(0, 0%, 1%);
   --text-color: hsl(var(--hue), 2%, 66%);
-  --body-color: hsl(var(--hue), 100%, 1%);
+  --body-color: hsl(var(--hue), 0%, 100%);
   --container-color: hsl(var(--hue), 2%, 10%);
-  --conic-gradient: conic-gradient(
-    from 150deg at 50% 45%,
-    hsl(var(--hue), 80%, 20%) 0deg,
-    hsl(var(--hue), 80%, 48%) 140deg,
-    hsl(var(--hue), 80%, 20%) 360deg
-  );
+  --conic-gradient: conic-gradient(from 150deg at 50% 45%,
+      hsl(var(--hue), 80%, 20%) 0deg,
+      hsl(var(--hue), 80%, 48%) 140deg,
+      hsl(var(--hue), 80%, 20%) 360deg);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Montserrat Alternates", sans-serif;
-  --second-font: "Grechen Fuemen", cursive;
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Montserrat", sans-serif;
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: 0.938rem;
+  --normal-font-size: 1rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 

@@ -1,58 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== FAVICON ===============-->
-    <link
-      rel="shortcut icon"
-      href="assets/img/favicon.png"
-      type="image/x-icon"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== REMIXICONS ===============-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
-    />
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="assets/svg/Favicon.svg" type="image/x-icon" />
 
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css" />
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
 
-    <title>Setefilm</title>
-  </head>
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
-  <body>
-    <!--==================== NAV ====================-->
-    <nav class="nav">
-      <img src="assets/svg/L7 Logo Horizontal.svg" alt="Logotipo L7 Windowfilm and Wrappint Store">
+  <title>Setefilm</title>
+</head>
+
+<body>
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="/" class="nav__logo">
+        <img class="nav__logo-img" src="assets/svg/L7 Logo Horizontal.svg" alt="Logo L7 Windowfilm and Wrapping Store">
+      </a>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link active-link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">Sobre</a>
+          </li>
+          <li class="nav__item">
+            <a href="#popular" class="nav__link">Serviços</a>
+          </li>
+          <li class="nav__item">
+            <a href="#featured" class="nav__link">Contato</a>
+          </li>
+        </ul>
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+      </div>
+      <!-- Toggle Button-->
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="ri-menu-line"></i>
+      </div>
     </nav>
+  </header>
+  <!--==================== MAIN ====================-->
+  <main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home section" id="home">
+      <!--=============== BANNER ===============-->
+      <div class="banner">
+        <img class="banner__img" src="assets/img/Banner-1.webp" alt="">
+        <div class="banner__info">
+          <h1 class="banner__info-title">Películas Windowfilm Automotivas</h1>
+          <p class="banner__info-description">Garantimos uma experiência prática e eficiente, desde o primeiro contato
+            até a conclusão do serviço.</p>
+          <a href="#" class="banner__info-btn button">Saiba Mais</a>
+        </div>
+      </div>
+    </section>
+    <!--==================== ABOUT ====================-->
+    <section class="about section" id="about"></section>
+  </main>
 
-    <!--==================== MAIN ====================-->
-    <main class="main">
-      <!--==================== HOME ====================-->
-      <section class="home section" id="home">
-        <h1>Site em Manutenção</h1>
-      </section>
-      <!--==================== ABOUT ====================-->
-      <section class="about section" id="about"></section>
-    </main>
+  <!--==================== FOOTER ====================-->
+  <footer class="footer"></footer>
 
-    <!--==================== FOOTER ====================-->
-    <footer class="footer"></footer>
+  <!--========== SCROLL UP ==========-->
+  <a href="#home" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-line"></i>
+  </a>
+  <!--=============== SCROLLREVEAL ===============-->
+  <script src="assets/js/scrollreveal.min.js"></script>
 
-    <!--========== SCROLL UP ==========-->
-    <a href="#home" class="scrollup" id="scroll-up">
-      <i class="ri-arrow-up-line"></i>
-    </a>
-    <!--=============== SCROLLREVEAL ===============-->
-    <script src="assets/js/scrollreveal.min.js"></script>
+  <!--=============== EMAIL JS ===============-->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <!--=============== EMAIL JS ===============-->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/main.js"></script>
+</body>
 
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
-  </body>
 </html>
