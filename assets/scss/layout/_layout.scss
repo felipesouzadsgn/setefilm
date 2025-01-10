@@ -9,7 +9,13 @@
   gap: 1.5rem;
 }
 
-.section {}
+.section {
+  padding: 32px 16px;
+
+  &__title {
+    text-align: center;
+  }
+}
 
 .main {
   overflow: hidden;

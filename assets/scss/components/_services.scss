@@ -1,2 +1,33 @@
 .services {
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  &__img {
+    border-radius: 1.5rem;
+  }
+
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+
+    &-category {
+      text-transform: uppercase;
+      font-size: var(--smaller-font-size);
+      color: var(--black-color);
+    }
+
+    &-description {
+      color: var(--black-color);
+      opacity: 0.6;
+    }
+  }
 }
