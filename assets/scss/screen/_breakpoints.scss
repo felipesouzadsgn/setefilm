@@ -1,0 +1,42 @@
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .home {
+    h1 {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 540px) {
+  .home {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* For large devices */
+
+@media screen and (min-width: 1200px) {
+  .home {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .scrollup {
+    right: 4rem;
+  }
+}
